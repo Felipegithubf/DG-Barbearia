@@ -108,66 +108,58 @@ p{
     
 //////------------------------//
 .about {
-    background-color: $primary-normal;
-    overflow: hidden;
-    color: $white-normal;
-    padding: 20px; /* Espaçamento interno */
+    background-image: url('assets/man-barbershop-salon-doing-haircut-beard-trim.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    text-align: center;
+    color: #fff;
+    position: relative; /* Adiciona posição relativa para poder ajustar o z-index */
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; /* Usa a mesma imagem de fundo */
+    filter: blur(10px); /* Aplica o desfoque à imagem de fundo */
+    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo principal */
 }
 
 .about-content {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Adicionado para garantir espaço entre imagem e texto */
-    gap: 20px; /* Espaçamento entre a imagem e o texto */
-    flex-wrap: wrap; /* Para responsividade */
-    padding: 34px 14px 64px 14px; ;
-}
-
-.about-content div {
-    flex: 1; /* Faz cada div ocupar o espaço necessário */
-}
-
-.about-content img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse seu contêiner */
-    height: auto; /* Mantém a proporção da imagem */
+    justify-content: center;
+    flex-direction: column; /* Ajusta para coluna em telas menores */
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .about-description {
-    flex: 2; /* Faz o texto ocupar 2 partes do espaço disponível */
-    padding: 20px; /* Espaçamento interno */
-    text-align: left; /* Alinha o texto à esquerda */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente para destacar texto */
+    border-radius: 8px; /* Borda arredondada */
 }
 
 .about-description h2 {
-    color: white; /* Cor do título */
-    font-size: 38px; /* Tamanho do título */
-    margin-bottom: 24px; /* Espaçamento inferior */
-    text-align: center;
-    
-   
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #fff; /* Cor do texto */
 }
 
 .about-description p {
-    font-size: 16px; /* Tamanho do texto */
-    line-height: 150%; /* Altura da linha */
-    /* Espaçamento inferior */
-}
-
-.about-description strong{
-   padding: 14px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff; /* Cor do texto */
 }
 
 @media screen and (max-width: 768px) {
     .about-content {
-        flex-direction: column; /* Torna a disposição vertical em telas menores */
-    }
-
-    .about-description {
-        text-align: center;
-         /* Centraliza o texto em telas menores */
-    }
-    p{
-       margin-bottom: 14px;
-       line-height: 150%;
+        flex-direction: column;
     }
 }
