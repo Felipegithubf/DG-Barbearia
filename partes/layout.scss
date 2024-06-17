@@ -106,6 +106,68 @@ p{
     }
 }
     
+//////------------------------//
+.about {
+    background-color: $primary-normal;
+    overflow: hidden;
+    color: $white-normal;
+    padding: 20px; /* Espaçamento interno */
+}
 
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adicionado para garantir espaço entre imagem e texto */
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    flex-wrap: wrap; /* Para responsividade */
+    padding: 34px 14px 64px 14px; ;
+}
 
+.about-content div {
+    flex: 1; /* Faz cada div ocupar o espaço necessário */
+}
 
+.about-content img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.about-description {
+    flex: 2; /* Faz o texto ocupar 2 partes do espaço disponível */
+    padding: 20px; /* Espaçamento interno */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.about-description h2 {
+    color: white; /* Cor do título */
+    font-size: 38px; /* Tamanho do título */
+    margin-bottom: 24px; /* Espaçamento inferior */
+    text-align: center;
+    
+   
+}
+
+.about-description p {
+    font-size: 16px; /* Tamanho do texto */
+    line-height: 150%; /* Altura da linha */
+    /* Espaçamento inferior */
+}
+
+.about-description strong{
+   padding: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Torna a disposição vertical em telas menores */
+    }
+
+    .about-description {
+        text-align: center;
+         /* Centraliza o texto em telas menores */
+    }
+    p{
+       margin-bottom: 14px;
+       line-height: 150%;
+    }
+}
