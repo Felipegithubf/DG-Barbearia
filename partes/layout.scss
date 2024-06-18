@@ -26,8 +26,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0;
-
   opacity: 0.9;
+
+  
   
 
 }
@@ -60,8 +61,8 @@ p{
 
 .button-contact{
     padding: 14px 28px;
-    color: $white-normal;
-    background-color: $red-normal; 
+    color: white;
+    background-color: #24303C;
     border: 0;
     font-size:18px;
     font-weight: 600;
@@ -162,4 +163,83 @@ p{
     .about-content {
         flex-direction: column;
     }
+}
+
+
+
+.services{
+  background-color: $white-normal;
+  color: $black-normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.services-content  h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 14px;
+
+
+}
+
+.services-content p{
+    line-height: 158%;
+    margin-bottom: 14px;
+    text-align: center;
+    max-width: 780px;
+
+}
+
+.haircuts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $white-normal;
+    color: white;
+    
+ 
+  }
+  
+  
+  .haircuts-info {
+    background-color: var(#fff); /* Supondo que você esteja usando variáveis CSS */
+    text-align: center;
+  }
+  
+  
+  .haircuts-container {
+  display: flex;
+  justify-content: space-around; /* ou use space-between conforme necessário */
+  align-items: flex-start;
+  background-color: var(--white-normal); /* Supondo que você esteja usando variáveis CSS */
+  padding: 20px;
+  background-color: $white-normal;
+  color: $black-normal;
+}
+
+.haircut-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.haircut img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.haircuts-info {
+  background-color: #fff; /* Substitua pela cor desejada */
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
