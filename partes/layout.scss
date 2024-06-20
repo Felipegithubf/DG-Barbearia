@@ -7,31 +7,42 @@
 
 // BG HOME
 
-.dg-home{
+.dg-home {
     position: relative;
-
+    overflow: hidden;
 }
 
-.dg-home::before{
+.dg-home::before, .dg-home::after {
     content: '';
     display: block;
     position: absolute;
-    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("/assets//arranjo-de-ferramentas-para-barbearia.jpg");
-    
-
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-
-  
-  
-
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    opacity: 0.9;
+    transition: all 1s ease-in-out;
 }
+
+.dg-home::before {
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("/assets/arranjo-de-ferramentas-para-barbearia.jpg");
+}
+
+.dg-home::after {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #06121e), url("/assets/young-man-getting-his-beard-styled-barber.jpg");
+    opacity: 0;
+}
+
+
+.dg-home:hover::after {
+    opacity: 1.0;
+}
+
+
 
 ////////--------------//////////
 
@@ -115,6 +126,16 @@ p{
         font-size:24px;
     }
 }
+
+
+
+
+ul , a {
+    color: #fff;
+    text-align: center;
+}
+
+
     
 //////------------------------//
 .about {
@@ -183,6 +204,7 @@ p{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 
 }
 
@@ -296,20 +318,32 @@ p{
 }
 
 
+
+
+
 .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 54px 0;
-    background-color: #723639; /* Fundo escuro */
-    color: $white-normal; /* Cor do texto clara para contraste */
+    padding: 34px 0;
+    color: #fff;
     text-align: center;
     width: 100%;
-    gap: 24px;
+    
+    
+   
+   
   
     
 }
+
+.footer-icons{
+    display: flex;
+    gap: 8px;
+    color: $white-normal;
+}
+
 
 .footer .social-media {
     display: flex;
@@ -331,6 +365,22 @@ p{
 .footer p {
     margin: 0;
     font-size: 14px; /* Tamanho pequeno da fonte para o texto */
+}
+
+.footer p2{
+    font-size: 19px;
+    font-style: normal;
+   
+}
+
+.servicess h2{
+   justify-content: center;
+   text-align: center;
+   background-image: url("");
+   background-color: #fff;
+   font-size: 25px;
+   
+   
 }
 
 /* Ajustes responsivos */
