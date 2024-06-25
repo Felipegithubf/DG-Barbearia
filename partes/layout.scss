@@ -1,13 +1,11 @@
-.container{
+.container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 8px;
     overflow-x: hidden;
-
 }
 
 // BG HOME
-
 
 .dg-home {
     position: relative;
@@ -39,16 +37,11 @@
     opacity: 0;
 }
 
-
 .dg-home:hover::after {
     opacity: 1.0;
 }
 
-
-
-////////--------------//////////
-
-.hero{
+.hero {
     color: $white-normal;
     min-height: 80vh;
     display: flex;
@@ -56,16 +49,14 @@
     align-items: center;
     justify-content: center;
     padding: 14px;
-
 }
 
-.header-button{
-   font-size: 20px;
-   margin-top: 15px;
-  
+.header-button {
+    font-size: 20px;
+    margin-top: 15px;
 }
 
-h1{
+h1 {
     text-align: center;
     line-height: 150%;
     max-width: 940%;
@@ -74,91 +65,73 @@ h1{
     justify-content: center;
 }
 
-p{
+p {
     text-align: center;
-    margin:14px 0;
-
+    margin: 14px 0;
 }
 
-.button-contact{
+.button-contact {
     padding: 14px 28px;
     color: white;
     background-color: #24303C;
     border: 0;
-    font-size:18px;
+    font-size: 18px;
     font-weight: 600;
     margin: 14px 0;
 }
 
-.button-contact:hover{
+.button-contact:hover {
     animation: scaleButton 0.8s alternate infinite;
-
 }
 
-@keyframes scaleButton{
-    from{
+@keyframes scaleButton {
+    from {
         transform: scale(1);
     }
-    to{
+    to {
         transform: scale(1.07);
     }
 }
 
-@media screen and ( max-width: 768){
-   .hero{
-    min-height: 60vh;
+@media screen and (max-width: 768px) {
+    .hero {
+        min-height: 60vh;
 
-    h1{
-        font-size: 34px;
-        padding: 0 14px;
-        width: 100%;
+        h1 {
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .header-button {
+            font-size: 24px;
+            padding: 0 14px;
+            width: 100%;
+        }
     }
-
-   p{
-    font-size:14px;
-   }
-   
-   .header-button{
-     font-size : 24px;
-     padding: 0 14px;
-     width: 100%;
-   }
-
-   }
 }
 
 @media screen and (max-width: 480px) {
-    .hero h1{
-        font-size:24px;
+    .hero h1 {
+        font-size: 24px;
     }
 }
 
-
-
-
- p ,  a {
+p, a {
     color: #fff;
     display: flex;
     padding: 20px;
-    justify-content: center; 
-    align-items: center;     
+    justify-content: center;
+    align-items: center;
     margin: 0;
     font-size: 20px;
     text-decoration: none;
-
-    
-   
-   
-    
-  
- 
-  
-  
 }
 
-
-    
-//////------------------------//
 .about {
     background-image: url('assets/man-barbershop-salon-doing-haircut-beard-trim.jpg');
     background-size: cover;
@@ -217,34 +190,29 @@ p{
     }
 }
 
-
-
-.services{
-  background-color: $white-normal;
-  color: $black-normal;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-
+.services {
+    background-color: $white-normal;
+    color: $black-normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-.services-content  h2{
+.services-content h2 {
     text-transform: uppercase;
     text-align: center;
     font-size: 28px;
     margin-bottom: 14px;
-
-
 }
 
-.services-content h4{
+.services-content h4 {
     line-height: 158%;
     margin-bottom: 14px;
     text-align: center;
     max-width: 780px;
-
+    padding: 20px;
 }
 
 .haircuts {
@@ -339,10 +307,6 @@ p{
     }
 }
 
-
-
-
-
 .footer {
     display: flex;
     flex-direction: column;
@@ -352,20 +316,13 @@ p{
     color: #fff;
     text-align: center;
     width: 100%;
-    
-    
-   
-   
-  
-    
 }
 
-.footer-icons{
+.footer-icons {
     display: flex;
     gap: 8px;
     color: $white-normal;
 }
-
 
 .footer .social-media {
     display: flex;
@@ -389,51 +346,42 @@ p{
     font-size: 14px; /* Tamanho pequeno da fonte para o texto */
 }
 
-.footer p2{
+.footer p2 {
     font-size: 19px;
     font-style: normal;
-   
 }
 
-.imagem img{
+.footer .address {
+    font-size: 16px;
+    margin-top: 20px; /* Espaço acima do endereço */
+    color: #ffffff; /* Cor do texto */
+}
+
+.imagem img {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-    
+    width: 120px; // Define a largura desejada, por exemplo, 50 pixels
+    height: auto; // Mantém a proporção da imagem
 }
 
-.produtos{
+.espaço {
+    padding: 8px;
+    background-color: #fff;
+}
+
+.produtos {
     background-color: #fff;
     padding: 20px;
-}
-
-.produto-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $white-normal;
-    color: white;
-    gap: 16px;
-    padding: 0 10px 10px 10px;
-}
-
-.produto-info {
-    background-color: var(--white); /* Supondo que você esteja usando variáveis CSS */
-    text-align: center;
-    border-radius: 8px;
 }
 
 .produtos-container {
     display: flex;
     justify-content: space-around; /* ou use space-between conforme necessário */
     align-items: flex-start;
-    background-color: $white-normal; /* Supondo que você esteja usando variáveis CSS */
-    padding: 60px;
+    background-color: #ba896a2d; /* Supondo que você esteja usando variáveis CSS */
+    padding: 150px;
     color: $black-normal;
 }
-
 
 .produto-item {
     display: flex;
@@ -468,54 +416,34 @@ p{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 14px;
-    z-index: 99;
-}
-
-.produto-info button {
-    color: $white-normal;
-    background-color: #f19100;
-    padding: 4px 8px;
-    border-radius: 4px;
-    border: 0;
-    cursor: pointer;
-
-   
 }
 
 @media screen and (max-width: 768px) {
     .produtos-container {
         flex-direction: column;
         align-items: center;
-        background-color: $white-normal; /* Ensure background is white on smaller screens */
+        background-color: #ba896a2d; /* Ensure background is white on smaller screens */
     }
 
     .produto-item {
         width: 100%;
         max-width: none;
-        background-color: $white-normal; /* Ensure background is white on smaller screens */
+        background-color: #ba896a2d; /* Ensure background is white on smaller screens */
     }
 
     .produto-info {
         flex-direction: column;
         align-items: center;
-        background-color: $white-normal; /* Ensure background is white on smaller screens */
+        background-color: #ba896a2d; /* Ensure background is white on smaller screens */
     }
 }
 
-
-
-    
-
-
-.servicess h2{
-   justify-content: center;
-   text-align: center;
-   background-image: url("");
-   background-color: #fff;
-   font-size: 25px;
-   
-   
+.servicess h2 {
+    justify-content: center;
+    text-align: center;
+    background-image: url("");
+    background-color: #fff;
+    font-size: 25px;
 }
 
 /* Ajustes responsivos */
@@ -527,7 +455,4 @@ p{
     .footer .logo img {
         max-width: 100px; /* Logo menor em telas menores */
     }
-
-    
-    
 }
