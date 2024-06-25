@@ -1,0 +1,1 @@
+const pageContainer = document.querySelector(".container")
