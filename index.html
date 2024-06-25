@@ -17,9 +17,10 @@
     <header>
       
       <nav>
-        <div class="logo-pg"
-        
-        ></div>
+        <!--LOGO-->
+        <div class="logo">
+         
+        </div>
 
     
         <p class="nav-menu">
@@ -35,9 +36,12 @@
     </header>
 
 
+   <!--MEIO-->
+
+
     <main class="hero container">
       <h1>ESTILO É UM REFLEXO DA SUA ATITUDE E SUA PERSONALIDADE.</h1>
-      <p>Horário de funcionamento: 09:00 às 19:00</p>
+   
       <a class="header-button" href="https://wa.me/5511999999999" target="_blank">Agendar horário</a>
     </div>
     </main>
@@ -48,36 +52,84 @@
         <div class="about-description">
           <h2>Sobre</h2>
           <p>Além dos serviços tradicionais de barbearia, oferecemos uma variedade de tratamentos para cuidar da sua pele e cabelo. Nossos produtos são selecionados com cuidado, combinando ingredientes de qualidade para garantir resultados excepcionais.</p>
-          <p>Horário de funcionamento<strong> 09:00</strong> às <strong>19:00</strong></p>
+          <p>Horário de funcionamento <strong>  <h6>09:00 </strong> às <strong>19:00</strong></h6></p>
         </div>
       </div>
-     
+
   
 
 
 
     </section>
+  
 
-    <section id="Produto" class="Produtos">
-      <div class="Produtos-container">
-        <h2>Produtos</h2>
+   <!--PRODUTO-->
+    
+   <section id="produtos" class="produtos">
+    <div class="services-content container">
+     
+      
+    
+      <h2>Produtos</h2>
+      <div class="imagem">
+      <img src="assets/vecteezy_beard_1202652.png">
+      <h4></h4>
+    
+  </section>
+   <section id="produtos" class="produtos-container">
+    
+    <div class="produto-item">
+      <div class="produto-card">
+        <img src="/assets/Design sem nome (16).png" alt=""/>
       </div>
-    </section>
+      <div class="produto-info">
+        <strong></strong>
+        <button>R$ 00,00</button>
+      </div>
+    </div>
+
+    <div class="produto-item">
+      <div class="produto-card">
+        <img src="" alt=""/>
+      </div>
+      <div class="produto-info">
+        <strong></strong>
+        <button>R$ 30,00</button>
+      </div>
+    </div>
+
+    <div class="produto-item">
+      <div class="produto-card">
+        <img src="" alt=""/>
+      </div>
+      <div class="produto-info">
+        <strong></strong>
+        <button>R$ 40,00</button>
+      </div>
+    </div>
+  </section>
+
+ <div class="espaço"></div>
 
     <section id="servicos" class="services">
       <div class="services-content container">
         <h2>Serviços</h2>
         <h4>Na nossa barbearia, cada corte de cabelo e barba é uma obra de arte em si. Combinando técnicas tradicionais com um toque moderno, oferecemos um serviço personalizado que não apenas transforma a sua aparência.</h4>
       
-    </section>
-
-    <section id="produtos" class="haircuts-container">
+    
+      </section>
+    
+     
+   
+   <!--CORTES-->
+   
+    <section id="" class="haircuts-container">
       <div class="haircut-item">
         <div class="haircut">
           <img src="assets/depositphotos_231646636-stock-photo-clients-in-barbershop.png" alt="Barba Normal"/>
         </div>
         <div class="haircuts-info">
-          <strong>Barba Normal</strong>
+          <strong></strong>
           <button>R$ 25,00</button>
         </div>
       </div>
@@ -87,7 +139,7 @@
           <img src="assets/Design sem nome (14).png" alt="Corte Normal"/>
         </div>
         <div class="haircuts-info">
-          <strong>Corte Normal</strong>
+          <strong></strong>
           <button>R$ 35,00</button>
         </div>
       </div>
@@ -97,14 +149,14 @@
           <img src="assets/2._Buzzcut.jpg" alt="Corte Americano"/>
         </div>
         <div class="haircuts-info">
-          <strong>Corte Americano</strong>
+          <strong></strong>
           <button>R$ 40,00</button>
         </div>
       </div>
     </section>
 
     
-   
+   <!--Localização / Contato-->
 
     <section id="contato-localizacao" class="servicess">
       <h2>Venha conhecer</h2>
@@ -126,18 +178,7 @@
 
   </div>
 
-  <script>
-    // Função para rolar suavemente para a seção correspondente ao clicar nos links do menu
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
