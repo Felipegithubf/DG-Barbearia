@@ -1,17 +1,20 @@
+@charset "UTF-8";
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 8px;
+  overflow-x: hidden;
 }
 
 .dg-home {
   position: relative;
+  overflow: hidden;
 }
 
-.dg-home::before {
+.dg-home::before, .dg-home::after {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("/assets//arranjo-de-ferramentas-para-barbearia.jpg");
   left: 0;
   top: 0;
   width: 100%;
@@ -21,4 +24,326 @@
   background-repeat: no-repeat;
   background-position: 50% 0;
   opacity: 0.9;
+  transition: all 1s ease-in-out;
+}
+
+.dg-home::before {
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("/assets/arranjo-de-ferramentas-para-barbearia.jpg");
+}
+
+.dg-home::after {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #06121e), url("/assets/young-man-getting-his-beard-styled-barber.jpg");
+  opacity: 0;
+}
+
+.dg-home:hover::after {
+  opacity: 1;
+}
+
+.hero {
+  color: #ffffff;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+
+.header-button {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+h1 {
+  text-align: center;
+  line-height: 150%;
+  max-width: 90%;
+  font-size: 46px;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  text-align: center;
+  margin: 14px 0;
+}
+
+.button-contact {
+  padding: 14px 28px;
+  color: white;
+  background-color: #24303C;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.button-contact:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+  .hero h1 {
+    font-size: 34px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+  .hero .header-button {
+    font-size: 24px;
+    padding: 0 14px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+}
+.about {
+  background-image: url("assets/man-barbershop-salon-doing-haircut-beard-trim.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  text-align: center;
+  color: #fff;
+  position: relative; /* Adiciona posição relativa para poder ajustar o z-index */
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit; /* Usa a mesma imagem de fundo */
+  filter: blur(10px); /* Aplica o desfoque à imagem de fundo */
+  z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo principal */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Ajusta para coluna em telas menores */
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-description {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente para destacar texto */
+  border-radius: 8px; /* Borda arredondada */
+  font-size: 40px;
+}
+
+.about-description h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #fff; /* Cor do texto */
+}
+
+.about-description p {
+  font-size: 19px;
+  line-height: 1.6;
+  color: #fff; /* Cor do texto */
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+.services {
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.services-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.services-content h4 {
+  line-height: 158%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+  padding: 20px;
+}
+
+.haircuts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: white;
+  gap: 16px;
+  padding: 0 44px 34px 44px;
+}
+
+.haircuts-info {
+  background-color: var(--white); /* Supondo que você esteja usando variáveis CSS */
+  text-align: center;
+  border-radius: 8px;
+}
+
+.haircuts-container {
+  display: flex;
+  justify-content: space-around; /* ou use space-between conforme necessário */
+  align-items: flex-start;
+  background-color: #ffffff; /* Supondo que você esteja usando variáveis CSS */
+  padding: 20px;
+  color: #000000;
+}
+
+.haircut-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.haircut-item img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.2s;
+}
+
+.haircut-item img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.haircut-item img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.haircuts-info {
+  background-color: #fff; /* Substitua pela cor desejada */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  z-index: 99;
+}
+
+.haircuts-info button {
+  color: #ffffff;
+  background-color: #723639;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .haircuts-container {
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; /* Ensure background is white on smaller screens */
+  }
+  .haircut-item {
+    width: 100%;
+    max-width: none;
+    background-color: #ffffff; /* Ensure background is white on smaller screens */
+  }
+  .haircuts-info {
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; /* Ensure background is white on smaller screens */
+  }
+}
+.menu-header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  list-style-type: none;
+}
+
+.menu-header nav ul li a {
+  color: #fff;
+  padding: 20px 40px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  transition: 0.2s;
+}
+
+.menu-header nav ul li a:hover {
+  background-color: #723639;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.137254902);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 34px 0;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 8px;
+  color: #ffffff;
+}
+
+.footer .social-media {
+  display: flex;
+  gap: 8px; /* Espaço entre os ícones das redes sociais */
+  margin-bottom: 20px; /* Espaço abaixo dos ícones das redes sociais */
+  color: #ffffff;
+}
+
+.footer .social-media a {
+  color: #ffffff; /* Cor dos ícones */
+  text-decoration: none;
+}
+
+.footer .logo img {
+  width: 100px; /* Ajuste conforme necessário */
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=layout.css.map */

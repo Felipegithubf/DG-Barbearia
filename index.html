@@ -10,32 +10,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <title>DGÊ Barbearia</title>
+   
 </head>
 <body>
+  
+  
   <div class="dg-home">
+    
+ 
     
     <header>
       
-      <nav>
-        <!--LOGO-->
+      
+      
+      
+        <!--LOGO-->   </header>
+        
+        
+        <div class="image5858">
+          
+        </div>
+        
         <div class="logo">
          
         </div>
-
-    
-        <p class="nav-menu">
-          <a href="#">Home</a>
-          <a href="#sobre-nos">Sobre Nós</a>
-          <a href="#produtos">Produtos</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#contato-localizacao">Contato/Localização</a>
-        </p>
         
-      </nav>
-      
-    </header>
-
-
+    <section class="menu-header">
+     <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#sobre-nos">Sobre-mim</a></li>
+            <li class="produtosss">
+                <a href="#produtos">Produtos</a>
+                <ul class="submenu">
+                    <li><a href="#">Produto 1</a></li>
+                    <li><a href="#">Produto 2</a></li>
+                    <li><a href="#">Produto 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato-localizacao">Contato/Localização</a></li>
+        </ul>
+    </nav>
+</section>
    <!--MEIO-->
 
 
@@ -50,7 +67,7 @@
       <div class="container about-content">
         <div></div>
         <div class="about-description">
-          <h2>Sobre</h2>
+          <h2>Sobre mim</h2>
           <p>Além dos serviços tradicionais de barbearia, oferecemos uma variedade de tratamentos para cuidar da sua pele e cabelo. Nossos produtos são selecionados com cuidado, combinando ingredientes de qualidade para garantir resultados excepcionais.</p>
           <p>Horário de funcionamento <strong>  <h6>09:00 </strong> às <strong>19:00</strong></h6></p>
         </div>
@@ -66,17 +83,20 @@
      
       
     
-      <h2>Produtos</h2>
+      
+       <h2>Produtos</h2>
+        <div class="imagem">
+          <img src="/assets/pulverizador.png">
+          <div class="produto-texto">
+          <h4>Na DGÊ Barbearia, valorizamos não apenas o corte impecável, mas também a experiência completa de cuidados masculinos. Nossos produtos são selecionados cuidadosamente para proporcionar o melhor em qualidade e estilo</h4>
+          
      
       
     
   </section>
    <section id="produtos" class="produtos-container">
     
-    <div class="produto-item">
-      <div class="produto-card">
-        <img src="/assets/Design sem nome (16).png" alt=""/>
-      </div>
+      
       
       <div class="produto-info">
   
@@ -86,26 +106,13 @@
       
     </div>
     
+    
 
-    <div class="produto-item">
-      <div class="produto-card">
-        <img src="assets/Design sem nome (18).png" alt=""/>
-      </div>
-      <div class="produto-info">
-        <strong></strong>
        
       </div>
     </div>
-
-    <div class="produto-item">
-      <div class="produto-card">
-        <img src="assets/Design sem nome (19).png" alt=""/>
-      </div>
-      <div class="produto-info">
-        <strong></strong>
-     
-      </div>
-    </div>
+    
+   
   </section>
 
  <div class="espaço"></div>
@@ -167,17 +174,23 @@
 
     <footer class="footer">
       <div class="social-media">
-        <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
-        <a href="#"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+          <a href="https://www.instagram.com/seu_perfil_instagram" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="https://www.facebook.com/seu_perfil_facebook" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+     
       </div>
       <div class="logo">
-        <img src="assets/th__4_-removebg-preview.png" alt="Logo"/>
+          <img src="assets/th__4_-removebg-preview.png" alt="Logo da Barbearia">
       </div>
-      <p>Copyright 2024 | DGÊ Barbearia. Todos os direitos reservados.</p>
+      <p>&copy; 2024 DGÊ Barbearia. Todos os direitos reservados.</p>
       <p>Rua Rio Grande do Norte, Vila Brasil (Manilha), Itaboraí - RJ - CEP 24859080</p>
-    </footer>
-
+  </footer>
+  <form>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" required></textarea>
+    <button type="submit">Enviar</button>
+</form>
   </div>
 
   <script src="script.js"></script>

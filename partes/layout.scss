@@ -121,16 +121,7 @@ p {
     }
 }
 
-p, a {
-    color: #fff;
-    display: flex;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    font-size: 20px;
-    text-decoration: none;
-}
+
 
 .about {
     background-image: url('assets/man-barbershop-salon-doing-haircut-beard-trim.jpg');
@@ -307,6 +298,74 @@ p, a {
     }
 }
 
+.menu-header {
+    nav {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            list-style-type: none;
+
+            li {
+                position: relative;
+
+                a {
+                    color: #fff;
+                    padding: 20px 40px;
+                    text-decoration: none;
+                    font-size: 20px;
+                    display: block;
+                    transition: .2s;
+                    font-weight: 600;
+
+                    &:hover {
+                        background-color: #723639;
+                        box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+                    }
+                }
+
+                .submenu {
+                    position: absolute;
+                    top: 100%; /* Posiciona o submenu abaixo do item pai */
+                    left: 0;
+                    background-color: #fff; /* Cor de fundo do submenu */
+                    display: none; /* Esconde inicialmente o submenu */
+                    padding: 10px;
+                    z-index: 1; /* Garante que o submenu fique acima dos outros elementos */
+                    border-radius: 5px; /* Borda arredondada */
+
+                    li {
+                        margin-bottom: 10px;
+
+                        a {
+                            color: #000;
+                            text-decoration: none;
+                            font-size: 16px;
+                            transition: .2s;
+
+                            &:hover {
+                                color: #fcfbf9;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    .submenu {
+                        display: block; /* Mostra o submenu ao passar o mouse */
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -370,16 +429,18 @@ p, a {
 }
 
 .produtos {
-    background-color: #fff;
-    padding: 20px;
+    background-color:#ffffffe3;
+    padding: 10px;
+    color: #000000;
+   
 }
 
 .produtos-container {
     display: flex;
     justify-content: space-around; /* ou use space-between conforme necessário */
     align-items: flex-start;
-    background-color: #ba896a2d; /* Supondo que você esteja usando variáveis CSS */
-    padding: 150px;
+    background-color:#ffffffe3; /* Supondo que você esteja usando variáveis CSS */
+    padding: 190px;
     color: $black-normal;
 }
 
@@ -389,7 +450,7 @@ p, a {
     align-items: center;
     margin: 10px;
     border-radius: 8px;
-    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px -1px 17px -4px rgb(255, 255, 255);
     overflow: hidden;
 }
 
@@ -411,6 +472,29 @@ p, a {
     height: auto;
 }
 
+.produto-texto {
+  
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+  
+}
+
+.image5858{
+    img{
+        max-width: 150px;
+        margin-bottom: 20px;
+       
+    }
+}
+.produto-card{
+    border-radius: 20px;
+    color: rgb(255, 145, 145);
+    
+}
+
+
+
 .produto-info {
     background-color: #fff; /* Substitua pela cor desejada */
     width: 100%;
@@ -422,13 +506,13 @@ p, a {
     .produtos-container {
         flex-direction: column;
         align-items: center;
-        background-color: #ba896a2d; /* Ensure background is white on smaller screens */
+        background-color: #E0D4D4; /* Ensure background is white on smaller screens */
     }
 
     .produto-item {
         width: 100%;
         max-width: none;
-        background-color: #ba896a2d; /* Ensure background is white on smaller screens */
+        background-color: #8eba6a2d; /* Ensure background is white on smaller screens */
     }
 
     .produto-info {
